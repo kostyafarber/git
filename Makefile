@@ -42,7 +42,7 @@ include shared.mak
 #
 # Define NO_OPENSSL environment variable if you do not have OpenSSL.
 #
-# Define HAVE_ALLOCA_H if you have working alloca(3) defined in that header.
+
 #
 # Define HAVE_PATHS_H if you have paths.h and want to use the default PATH
 # it specifies.
@@ -1276,6 +1276,7 @@ BUILTIN_OBJS += builtin/patch-id.o
 BUILTIN_OBJS += builtin/prune-packed.o
 BUILTIN_OBJS += builtin/prune.o
 BUILTIN_OBJS += builtin/pull.o
+BUILTIN_OBJS += builtin/psuh.o
 BUILTIN_OBJS += builtin/push.o
 BUILTIN_OBJS += builtin/range-diff.o
 BUILTIN_OBJS += builtin/read-tree.o
@@ -1347,7 +1348,7 @@ endif
 # which'll override these defaults.
 # Older versions of GCC may require adding "-std=gnu99" at the end.
 CFLAGS = -g -O2 -Wall
-LDFLAGS =
+LDFLAGS = -L/opt/homebrew/opt/libiconv/lib
 CC_LD_DYNPATH = -Wl,-rpath,
 BASIC_CFLAGS = -I.
 BASIC_LDFLAGS =
