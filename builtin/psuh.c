@@ -4,6 +4,11 @@
 #include "commit.h"
 #include "pretty.h"
 
+static const char * const psuh_usage[] = {
+	N_("git psuh [<arg>...]"),
+	NULL
+};
+
 int cmd_psuh(int argc, const char **argv, const char *prefix)
 {
 	/* Print this to stdout*/
@@ -52,5 +57,6 @@ int cmd_psuh(int argc, const char **argv, const char *prefix)
 		pp_commit_easy(CMIT_FMT_ONELINE, c, &commitline);
 		printf(_("Current commit: %s\n"), commitline.buf);
 	}
+
 	return 0;
 }

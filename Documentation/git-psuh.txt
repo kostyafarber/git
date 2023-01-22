@@ -1,0 +1,28 @@
+git-psuh(1)
+===========
+
+NAME
+----
+git-psuh - Delight users' typo with a shy horse
+
+
+SYNOPSIS
+--------
+[verse]
+'git-psuh [<arg>...]'
+
+DESCRIPTION
+-----------
+This is Kostya's cool new git command psuh.
+
+OPTIONS[[OPTIONS]]
+------------------
+You can provide any command line arguments you want and it'll just print them for you!!
+
+OUTPUT
+------
+Cool stuff.
+
+GIT
+---
+Part of the git[1] suite
