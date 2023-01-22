@@ -1,5 +1,6 @@
 #include "builtin.h"
 #include "config.h"
+#include "wt-status.h"
 
 int cmd_psuh(int argc, const char **argv, const char *prefix)
 {
@@ -27,5 +28,12 @@ int cmd_psuh(int argc, const char **argv, const char *prefix)
 	} else {
 		printf(_("Your name is: %s\n"), cfg_name);
 	}
+
+	struct wt_status status;
+
+	wt_status_prepare(the_repository, &status);
+	git_config(git_default_config, &status);
+
+	printf(_("Your current branch is: %s\n"), status.branch);
 	return 0;
 }
