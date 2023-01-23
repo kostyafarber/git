@@ -11,6 +11,12 @@ static const char * const psuh_usage[] = {
 
 int cmd_psuh(int argc, const char **argv, const char *prefix)
 {
+	struct option options[] = {
+		OPT_END()
+	};
+
+	argc = parse_options(argc, argv, prefix, options, psuh_usage, 0);
+	
 	/* Print this to stdout*/
 	printf(_("This is kostya's first command yo!\n"));
 

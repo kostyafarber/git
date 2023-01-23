@@ -150,6 +150,7 @@ git-patch-id                            purehelpers
 git-prune                               ancillarymanipulators   complete
 git-prune-packed                        plumbingmanipulators
 git-pull                                mainporcelain           remote
+git-psuh                                mainporcelain           info
 git-push                                mainporcelain           remote
 git-quiltimport                         foreignscminterface
 git-range-diff                          mainporcelain
